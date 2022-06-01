@@ -5,9 +5,7 @@ using System.Linq;
 
 namespace CustomExternalListWebApi.Controllers
 {
-    [Authorize]
     [Route("api/apps")]
-    [RequiredScope("access_as_user")]
     public class MsAppsController : Controller
     {
         private static readonly OfficeApp officeApp = new OfficeApp { Id = "office", Name = "Office", Released = "19901119", Color = "#d83b01" };
@@ -32,7 +30,14 @@ namespace CustomExternalListWebApi.Controllers
             new OfficeApp { Id = "yammer", Name = "Yammer", Released = "20080908", Color = "#106ebe" }
         };
 
+        public IActionResult Get()
+        {
+            return Json(allApps);
+        }
+
+        [Authorize]
         [HttpPost]
+        [RequiredScope("access_as_user")]
         public IActionResult Post([FromBody] Payload payload)
         {
             switch (payload.Operation)
