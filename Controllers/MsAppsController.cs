@@ -8,7 +8,7 @@ namespace CustomExternalListWebApi.Controllers
     [Route("api/apps")]
     public class MsAppsController : Controller
     {
-        private static readonly OfficeApp officeApp = new OfficeApp { Id = "office", Name = "Office", Released = "19901119", Color = "#d83b01" };
+        private static readonly OfficeApp officeApp = new() { Id = "office", Name = "Office", Released = "19901119", Color = "#d83b01" };
 
         private readonly OfficeApp[] allApps = new[] {
             new OfficeApp { Id = "access", Name = "Access", Released = "19921101", Color = "#a4373a" },
@@ -44,7 +44,12 @@ namespace CustomExternalListWebApi.Controllers
             {
                 case "default":
                     {
-                        return Json(new[] { officeApp });
+                        var requestedItems = allApps.Where(x =>
+                        {
+                            string idLowerCase = payload.Input.ToLowerInvariant();
+                            return x.Id == idLowerCase;
+                        }).Select(x => new { x.Id, x.Name, x.Released });
+                        return Json(requestedItems);
                     }
                 case "search":
                     {
@@ -53,12 +58,12 @@ namespace CustomExternalListWebApi.Controllers
                             string searchLowerCase = payload.Input.ToLowerInvariant();
                             return x.Name.ToLowerInvariant().Contains(searchLowerCase);
                         }).Select(x => new { x.Id, x.Name, x.Released });
-                        return this.Json(requestedItems);
+                        return Json(requestedItems);
                     }
                 case "get":
                     {
                         var requestedItems = allApps.Where(x => payload.Ids.Contains(x.Id));
-                        return this.Json(requestedItems);
+                        return Json(requestedItems);
                     }
                 default:
                     {
