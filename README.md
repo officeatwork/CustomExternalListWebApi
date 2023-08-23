@@ -12,6 +12,8 @@ This is a sample implementation for a service that fulfills the officeatwork Des
    2. Add the `access_as_user` scope
    3. Under **Authorized client applications**, add the officeatwork Designer and Wizard client application and allow it to access the previously created scope:
       - `0c67871c-ffbc-4b37-bd61-afce12b299f9`
+   4. If you plan to use the officeatwork Verifier, also add the officeatwork Verifier client application:
+      - `7c87bc6a-481c-474a-b99d-4323f60ad764`
 3. Under **API permissions**
    1. Click **Grant admin consent for `your tenant name`** to allow all users in your tenant to get tokens for this App.
 

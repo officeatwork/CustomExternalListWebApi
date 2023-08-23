@@ -1,3 +1,5 @@
 {
-    "dotnet.defaultSolution": "CustomExternalListWebApi.sln"
+    "dotnet.defaultSolution": "CustomExternalListWebApi.sln",
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net6.0\\publish"
 }

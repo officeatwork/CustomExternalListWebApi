@@ -1,0 +1,104 @@
+[
+  {
+    "id": "access",
+    "name": "Access",
+    "released": "19921101",
+    "color": "#a4373a"
+  },
+  {
+    "id": "exchange",
+    "name": "Exchange",
+    "released": "19960411",
+    "color": "#0078d4"
+  },
+  {
+    "id": "excel",
+    "name": "Excel",
+    "released": "19870101",
+    "color": "#217346"
+  },
+  {
+    "id": "office",
+    "name": "Office",
+    "released": "19901119",
+    "color": "#d83b01"
+  },
+  {
+    "id": "onedrive",
+    "name": "OneDrive",
+    "released": "20070801",
+    "color": "#0078d4"
+  },
+  {
+    "id": "onenote",
+    "name": "OneNote",
+    "released": "20180801",
+    "color": "#7719aa"
+  },
+  {
+    "id": "planner",
+    "name": "Planner",
+    "released": "20160606",
+    "color": "#31752f"
+  },
+  {
+    "id": "powerapps",
+    "name": "PowerApps",
+    "released": "20151130",
+    "color": "#742774"
+  },
+  {
+    "id": "powerpoint",
+    "name": "PowerPoint",
+    "released": "19900522",
+    "color": "#b7472a"
+  },
+  {
+    "id": "publisher",
+    "name": "Publisher",
+    "released": "19910101",
+    "color": "#077568"
+  },
+  {
+    "id": "sharepoint",
+    "name": "SharePoint",
+    "released": "20010328",
+    "color": "#0078d4"
+  },
+  {
+    "id": "skype",
+    "name": "Skype",
+    "released": "20030829",
+    "color": "#0078d4"
+  },
+  {
+    "id": "sway",
+    "name": "Sway",
+    "released": "20140101",
+    "color": "#008272"
+  },
+  {
+    "id": "teams",
+    "name": "Teams",
+    "released": "20170314",
+    "color": "#6264a7"
+  },
+  {
+    "id": "visio",
+    "name": "Visio",
+    "released": "19920101",
+    "color": "#3955a3"
+  },
+  {
+    "id": "word",
+    "name": "Word",
+    "released": "19831025",
+    "color": "#2b579a"
+  },
+  {
+    "id": "yammer",
+    "name": "Yammer",
+    "released": "20080908",
+    "color": "#106ebe"
+  }
+]
