@@ -6,16 +6,16 @@ using System.Text.Json;
 
 namespace CustomExternalListWebApi.Controllers
 {
-    [Route("api/apps")]
+    [Route("api/contacts")]
     public class MsAppsController : Controller
     {
-        private readonly OfficeApp[] allApps;
+        private readonly Contact[] allApps;
 
         public MsAppsController()
         {
             string json = System.IO.File.ReadAllText("data.json");
             var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
-            allApps = JsonSerializer.Deserialize<OfficeApp[]>(json, options);
+            allApps = JsonSerializer.Deserialize<Contact[]>(json, options);
         }
 
         public IActionResult Get()
@@ -36,7 +36,7 @@ namespace CustomExternalListWebApi.Controllers
                         {
                             string idLowerCase = payload.Input.ToLowerInvariant();
                             return x.Id == idLowerCase;
-                        }).Select(x => new { x.Id, x.Name, x.Released });
+                        });
                         return Json(requestedItems);
                     }
                 case "search":
@@ -44,8 +44,8 @@ namespace CustomExternalListWebApi.Controllers
                         var requestedItems = allApps.Where(x =>
                         {
                             string searchLowerCase = payload.Input.ToLowerInvariant();
-                            return x.Name.ToLowerInvariant().Contains(searchLowerCase);
-                        }).Select(x => new { x.Id, x.Name, x.Released });
+                            return x.DisplayName.ToLowerInvariant().Contains(searchLowerCase);
+                        }).Select(x => new { x.Id, x.DisplayName, x.City });
                         return Json(requestedItems);
                     }
                 case "get":

@@ -1,104 +1,182 @@
 [
   {
-    "id": "access",
-    "name": "Access",
-    "released": "19921101",
-    "color": "#a4373a"
+    "id": "1",
+    "displayName": "John Smith",
+    "firstName": "John",
+    "lastName": "Smith",
+    "address": "123 Main St",
+    "city": "Anytown",
+    "phoneNumber": "555-1234"
   },
   {
-    "id": "exchange",
-    "name": "Exchange",
-    "released": "19960411",
-    "color": "#0078d4"
+    "id": "2",
+    "displayName": "Jane Doe",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "address": "456 Elm St",
+    "city": "Anytown",
+    "phoneNumber": "555-5678"
   },
   {
-    "id": "excel",
-    "name": "Excel",
-    "released": "19870101",
-    "color": "#217346"
+    "id": "3",
+    "displayName": "Bob Johnson",
+    "firstName": "Bob",
+    "lastName": "Johnson",
+    "address": "789 Oak St",
+    "city": "Anytown",
+    "phoneNumber": "555-9012"
   },
   {
-    "id": "office",
-    "name": "Office",
-    "released": "19901119",
-    "color": "#d83b01"
+    "id": "4",
+    "displayName": "Samantha Lee",
+    "firstName": "Samantha",
+    "lastName": "Lee",
+    "address": "321 Pine St",
+    "city": "Othertown",
+    "phoneNumber": "555-4321"
   },
   {
-    "id": "onedrive",
-    "name": "OneDrive",
-    "released": "20070801",
-    "color": "#0078d4"
+    "id": "5",
+    "displayName": "Michael Chen",
+    "firstName": "Michael",
+    "lastName": "Chen",
+    "address": "654 Cedar St",
+    "city": "Anycity",
+    "phoneNumber": "555-8765"
   },
   {
-    "id": "onenote",
-    "name": "OneNote",
-    "released": "20180801",
-    "color": "#7719aa"
+    "id": "6",
+    "displayName": "Emily Davis",
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "address": "987 Maple St",
+    "city": "Sometown",
+    "phoneNumber": "555-2468"
   },
   {
-    "id": "planner",
-    "name": "Planner",
-    "released": "20160606",
-    "color": "#31752f"
+    "id": "7",
+    "displayName": "David Kim",
+    "firstName": "David",
+    "lastName": "Kim",
+    "address": "246 Oak St",
+    "city": "Newcity",
+    "phoneNumber": "555-1357"
   },
   {
-    "id": "powerapps",
-    "name": "PowerApps",
-    "released": "20151130",
-    "color": "#742774"
+    "id": "8",
+    "displayName": "Jessica Rodriguez",
+    "firstName": "Jessica",
+    "lastName": "Rodriguez",
+    "address": "135 Elm St",
+    "city": "Southtown",
+    "phoneNumber": "555-9753"
   },
   {
-    "id": "powerpoint",
-    "name": "PowerPoint",
-    "released": "19900522",
-    "color": "#b7472a"
+    "id": "9",
+    "displayName": "William Brown",
+    "firstName": "William",
+    "lastName": "Brown",
+    "address": "753 Pine St",
+    "city": "Westcity",
+    "phoneNumber": "555-8642"
   },
   {
-    "id": "publisher",
-    "name": "Publisher",
-    "released": "19910101",
-    "color": "#077568"
+    "id": "10",
+    "displayName": "Avery Wilson",
+    "firstName": "Avery",
+    "lastName": "Wilson",
+    "address": "642 Cedar St",
+    "city": "Northtown",
+    "phoneNumber": "555-3197"
   },
   {
-    "id": "sharepoint",
-    "name": "SharePoint",
-    "released": "20010328",
-    "color": "#0078d4"
+    "id": "11",
+    "displayName": "Olivia Martinez",
+    "firstName": "Olivia",
+    "lastName": "Martinez",
+    "address": "319 Maple St",
+    "city": "Eastcity",
+    "phoneNumber": "555-7642"
   },
   {
-    "id": "skype",
-    "name": "Skype",
-    "released": "20030829",
-    "color": "#0078d4"
+    "id": "12",
+    "displayName": "Ethan Nguyen",
+    "firstName": "Ethan",
+    "lastName": "Nguyen",
+    "address": "764 Oak St",
+    "city": "Newtown",
+    "phoneNumber": "555-9317"
   },
   {
-    "id": "sway",
-    "name": "Sway",
-    "released": "20140101",
-    "color": "#008272"
+    "id": "13",
+    "displayName": "Sophia Hernandez",
+    "firstName": "Sophia",
+    "lastName": "Hernandez",
+    "address": "317 Pine St",
+    "city": "Southcity",
+    "phoneNumber": "555-2468"
   },
   {
-    "id": "teams",
-    "name": "Teams",
-    "released": "20170314",
-    "color": "#6264a7"
+    "id": "14",
+    "displayName": "Daniel Kim",
+    "firstName": "Daniel",
+    "lastName": "Kim",
+    "address": "246 Cedar St",
+    "city": "Westtown",
+    "phoneNumber": "555-3197"
   },
   {
-    "id": "visio",
-    "name": "Visio",
-    "released": "19920101",
-    "color": "#3955a3"
+    "id": "15",
+    "displayName": "Isabella Nguyen",
+    "firstName": "Isabella",
+    "lastName": "Nguyen",
+    "address": "764 Pine St",
+    "city": "Northcity",
+    "phoneNumber": "555-9317"
   },
   {
-    "id": "word",
-    "name": "Word",
-    "released": "19831025",
-    "color": "#2b579a"
+    "id": "16",
+    "displayName": "Elijah Hernandez",
+    "firstName": "Elijah",
+    "lastName": "Hernandez",
+    "address": "317 Oak St",
+    "city": "Southcity",
+    "phoneNumber": "555-2468"
   },
   {
-    "id": "yammer",
-    "name": "Yammer",
-    "released": "20080908",
-    "color": "#106ebe"
+    "id": "17",
+    "displayName": "Mia Lee",
+    "firstName": "Mia",
+    "lastName": "Lee",
+    "address": "321 Cedar St",
+    "city": "Othertown",
+    "phoneNumber": "555-4321"
+  },
+  {
+    "id": "18",
+    "displayName": "Alexander Davis",
+    "firstName": "Alexander",
+    "lastName": "Davis",
+    "address": "987 Pine St",
+    "city": "Sometown",
+    "phoneNumber": "555-2468"
+  },
+  {
+    "id": "19",
+    "displayName": "Ava Rodriguez",
+    "firstName": "Ava",
+    "lastName": "Rodriguez",
+    "address": "135 Cedar St",
+    "city": "Southtown",
+    "phoneNumber": "555-9753"
+  },
+  {
+    "id": "20",
+    "displayName": "William Brown",
+    "firstName": "William",
+    "lastName": "Brown",
+    "address": "753 Oak St",
+    "city": "Westcity",
+    "phoneNumber": "555-8642"
   }
 ]
