@@ -30,7 +30,7 @@ This is a sample implementation for a service that fulfills the officeatwork Des
 1. Press F5 to run the Web API
    - This will run the ".NET Core Launch (web)" debug target
    - The API is hosted at this URI:
-     - https://localhost:5001/api/apps
+     - https://localhost:5001/api/contacts
 2. Verify that the server is working
    - Navigate to the API route in a browser
    - You should see a JSON structure in the browser
@@ -40,4 +40,4 @@ This is a sample implementation for a service that fulfills the officeatwork Des
      - If you continue to have problems, please consult the dotnet documentation:
        - https://docs.microsoft.com/en-us/dotnet/core/additional-tools/self-signed-certificates-guide
 3. You should now be able to use the API in the Custom External List Input Field in the officeatwork Designer by using this URL:
-   - https://localhost:5001/api/apps
+   - https://localhost:5001/api/contacts
