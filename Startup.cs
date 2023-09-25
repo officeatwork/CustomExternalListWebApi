@@ -24,6 +24,8 @@ namespace CustomExternalListWebApi
             services.AddMicrosoftIdentityWebApiAuthentication(Configuration);
 
             services.AddControllers();
+
+            services.AddScoped<Services.ContactsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
