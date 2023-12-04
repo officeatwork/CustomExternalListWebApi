@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace CustomExternalListWebApi.Services
 {
-    public class ContactsService {
-        
+    public class ContactsService
+    {
+
         private readonly Dictionary<string, string>[] allContacts;
 
         public ContactsService()
@@ -19,14 +21,21 @@ namespace CustomExternalListWebApi.Services
             this.allContacts = JsonSerializer.Deserialize<Dictionary<string, string>[]>(json, options);
         }
 
-        public Dictionary<string, string>[] GetAllContacts() {
+        public Dictionary<string, string>[] GetAllContacts()
+        {
             return this.allContacts;
         }
 
-        public async Task<IEnumerable<dynamic>> HandleCustomExternalListRequest(Stream body) 
+        public async Task<IEnumerable<dynamic>> HandleCustomExternalListRequest(Stream body)
         {
             using StreamReader reader = new(body, Encoding.UTF8);
             string json = await reader.ReadToEndAsync();
+
+            if (string.IsNullOrEmpty(json))
+            {
+                throw new Exception("empty_request");
+            }
+
             var payload = JsonSerializer.Deserialize<Dictionary<string, JsonValue>>(json);
 
             var operation = payload["operation"].Deserialize<string>();
@@ -48,12 +57,10 @@ namespace CustomExternalListWebApi.Services
 
                         var requestedItems = allContacts
                             .Where(x => x["displayName"].ToLowerInvariant().Contains(searchLowerCase))
-                            .Select(x => new 
-                            { 
-                                ID = x["id"],
-                                DisplayName = x["displayName"],
-                                City = x["city"]
-                            });
+                            .Select(x => x
+                                .Where(kvp => kvp.Key == "id" || kvp.Key.StartsWith("displayName") || kvp.Key.StartsWith("city"))
+                                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value)
+                            );
 
                         return requestedItems;
                     }
@@ -69,12 +76,10 @@ namespace CustomExternalListWebApi.Services
                                         .Contains(input[key].ToLowerInvariant()));
 
                             })
-                            .Select(x => new 
-                            { 
-                                ID = x["id"],
-                                DisplayName = x["displayName"],
-                                City = x["city"]
-                            });
+                            .Select(x => x
+                                .Where(kvp => kvp.Key == "id" || kvp.Key.StartsWith("displayName") || kvp.Key.StartsWith("city"))
+                                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value)
+                            );
                         return requestedItems;
                     }
                 case "get":
