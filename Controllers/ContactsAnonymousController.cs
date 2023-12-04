@@ -1,17 +1,15 @@
-﻿using CustomExternalListWebApi.Services;
-using Microsoft.AspNetCore.Authorization;
+using CustomExternalListWebApi.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Web.Resource;
 using System.Threading.Tasks;
 
 namespace CustomExternalListWebApi.Controllers
 {
-    [Route("api/contacts")]
-    public class ContactsController : Controller
+    [Route("api/contactsAnonymous")]
+    public class ContactsAnonymousController : Controller
     {
         private readonly ContactsService contactsService;
 
-        public ContactsController(ContactsService contactsService)
+        public ContactsAnonymousController(ContactsService contactsService)
         {
             this.contactsService = contactsService;
         }
@@ -21,9 +19,7 @@ namespace CustomExternalListWebApi.Controllers
             return Json(this.contactsService.GetAllContacts());
         }
 
-        [Authorize]
         [HttpPost]
-        [RequiredScope("access_as_user")]
         public async Task<IActionResult> Post()
         {
             try
