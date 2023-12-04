@@ -6,6 +6,9 @@
     "lastName": "Smith",
     "address": "123 Main St",
     "city": "Anytown",
+    "city.en-us": "Anytown",
+    "city.de-ch": "Musterdörfli",
+    "city de": "Musterdorfchen",
     "phoneNumber": "555-1234"
   },
   {
