@@ -8,12 +8,19 @@ This is a sample implementation for a service that fulfills the officeatwork Des
 
 1. Create an Azure App Registration in your Tenant
 2. Under **Expose an API**
+
    1. Create an **Application ID URI**. It should be of the form `api://SOME-GUID`
    2. Add the `access_as_user` scope
-   3. Under **Authorized client applications**, add the officeatwork Designer and Wizard client application and allow it to access the previously created scope:
-      - `0c67871c-ffbc-4b37-bd61-afce12b299f9`
-   4. If you plan to use the officeatwork Verifier, also add the officeatwork Verifier client application:
-      - `7c87bc6a-481c-474a-b99d-4323f60ad764`
+   3. Under **Authorized client applications**, give the officeatwork client applications you plan to use access the previously created scope:
+
+      | App                   | ClientId                             |
+      | --------------------- | ------------------------------------ |
+      | Designer and Wizard   | 0c67871c-ffbc-4b37-bd61-afce12b299f9 |
+      | Verifier              | 7c87bc6a-481c-474a-b99d-4323f60ad764 |
+      | Smart Template        | 78beac73-7c27-47ce-97b8-a769ed762404 |
+      | Mail Signature        | 722e11e1-c87f-4f97-803f-3d012d532427 |
+      | Mail Signature Editor | 529aa7c0-7578-4601-a3be-04ce7dbdf489 |
+
 3. Under **API permissions**
    1. Click **Grant admin consent for `your tenant name`** to allow all users in your tenant to get tokens for this App.
 
